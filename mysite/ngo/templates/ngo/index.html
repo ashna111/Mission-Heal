@@ -1,0 +1,40 @@
+{% extends 'ngo/base.html' %}
+
+{% block body %}
+<div class="ngos-container container-fluid">
+
+    <!-- ngos -->
+    <div class="row">
+        {% if all_ngos %}
+            {% for ngo in all_ngos %}
+                <div class="col-lg-4">
+                    <div class="thumbnail">
+                        <a href="{% url 'ngo:detail' ngo.id %}">
+                            <img src="{{ ngo.ngo_logo }}" class="img-responsive" width="350px" height="350px">
+                        </a>
+                        <div class="caption">
+                            <h2>{{ ngo.ngo_name }}</h2>
+                            <h4>{{ ngo.ngo_loc }}</h4>
+                        
+                            <!-- View Details -->
+                            <a href="{% url 'ngo:detail' ngo.id %}" class="btn btn-primary btn-sm" role="button">View Details</a>
+
+                            <!-- Delete Album -->
+                            <form action="{% url 'ngo:ngo-delete' ngo.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <input type="hidden" name="ngo_id" value="{{ ngo.id }}" />
+                                <button type="submit" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+               
+            {% endfor %}
+
+{% else %}
+<h2>There are no Ngos</h2>
+{% endif %}
+{% endblock %}

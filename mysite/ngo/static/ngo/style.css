@@ -1,0 +1,13 @@
+body{
+    background:white url('images/background.jpg');
+}
+
+.navbar{
+    border-radius: 0px;
+    font-size: 1.5em;
+    font-family: 'Courgette', cursive;
+}
+.navbar-brand{
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1.65em;
+}

@@ -1,0 +1,37 @@
+{% extends 'ngo/base.html' %}
+
+{% block title %}NGO Details{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <img src='{{ngo.ngo_logo}}' height="300px" width="300px"/>
+        
+        <h2>{{ngo.ngo_name}}</h2>
+        <h3>{{ngo.ngo_relieftype}}</h3>
+        <h3>{{ngo.ngo_loc}}</h3>
+
+        </div>
+        <div class="col-lg-4" style="background-color:white;">
+            <ul>
+                {% for ngodetails in ngo.ngodetails_set.all %}
+                <li>{{ngodetails.ngo_details}}<br><br><h3>Address:</h3><br>{{ngodetails.ngo_address}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-3" style="background-color:white">
+            <h3>Join in as a volunteer!!</h3>
+            <p>Just 2.5 hours a week can help change so much!<br>Be a part of our campaign today!</p>
+            <br><br>
+            <h3>Be a part of our movement today!</h3>
+            <p>Working in development is an attractive option for people around the world. The sector has grown significantly over the past two decades as organisations have become larger, more sophisticated and increasingly professionalised. Working for an NGO provides an opportunity to make a difference, support others in need and create positive change in communities the world over.
+                   <br> 
+                    
+        </div>
+    </div>
+</div>
+{% endblock %}

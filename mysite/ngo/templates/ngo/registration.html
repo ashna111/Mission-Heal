@@ -1,0 +1,28 @@
+{% extends 'ngo/base.html' %}
+{% block title %}SignUp{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Create a New Account</h3>
+                    <form class="form-horizontal" action="" method="post">
+                        {% csrf_token %}
+                        {% include 'ngo/form-template.html' %}
+                        <div class="from-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
