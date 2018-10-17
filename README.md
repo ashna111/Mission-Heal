@@ -10,11 +10,6 @@ Our aim is to make a community that is Government-Independent and is beneficial 
 * One can get a view of all the NGOs and charitable trusts all at one place
 * One can get the address of that particular NGO
 
-<h3 align="center">Mission-Heal as a Web-Application</h3>
-<p align="center">
-  <img src="./assets/Source.gif" alt="Web-app" width="800px" heigth="600px"/>
-</p>
-
 ## Add-Ons:
 * To add the current location of the NGO
 * To provide a portal where one can also sign-up as a volunteer
