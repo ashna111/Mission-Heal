@@ -11,8 +11,8 @@ Our aim is to make a community that is Government-Independent and is beneficial 
 * One can get the address of that particular NGO
 
 ## Add-Ons:
-* To add the current location of the NGO
 * To provide a portal where one can also sign-up as a volunteer
+* Get notifications for events
 
 ## Contributors:
 * [@ashna111](https://github.com/ashna111)
